@@ -1,0 +1,32 @@
+@use './placeholders/root.scss';
+
+.form {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+
+    &__input {
+        background-color: root.$secondary-dark;
+        border: none;
+        border-radius: 1rem;
+        padding: .3rem;
+        padding-left: .8rem;
+        color: root.$typeography-secondary;
+
+        &::placeholder {
+            color: root.$typeography-secondary;
+        }
+    }
+
+    &__btn {
+        background: none;
+        border: none;
+
+        svg {
+            font-size: 1.8em;
+            color: root.$secondary-dark
+        }
+    }
+}
