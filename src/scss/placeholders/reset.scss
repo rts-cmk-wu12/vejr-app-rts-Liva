@@ -1,3 +1,5 @@
+@use './root.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +7,7 @@
 }
 
 html {
+    color: root.$typeography-primary;
     font-family: system-ui, sans-serif;
 }
 
@@ -13,6 +16,17 @@ a {
     text-decoration: none;
 }
 
-input::placeholder, button {
+input::placeholder,
+button {
     font-family: inherit;
+}
+
+body {
+    background: linear-gradient(root.$primary-dark, root.$secondary-dark, root.$accent-purple);
+    min-height: 100vh;
+}
+
+main {
+    padding-inline: 1.5rem;
+    margin-top: 2rem;
 }
