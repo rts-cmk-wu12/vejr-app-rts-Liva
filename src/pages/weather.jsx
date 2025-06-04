@@ -19,6 +19,7 @@ function WeatherPage() {
         }
 
         if (query === '') {
+            setCity({});
             setSearchedCities(null);
             return;
         }
