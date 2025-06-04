@@ -30,7 +30,6 @@ function WeatherPage() {
         setCity({});
     }
 
-    
     return (
         <>
             <header>
