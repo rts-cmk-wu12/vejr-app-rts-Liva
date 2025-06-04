@@ -1,4 +1,8 @@
 @use './placeholders/reset.scss';
-@use './search.scss';
-@use './city.scss';
-@use './home.scss';
+
+@use './pages/home.scss';
+@use './pages/weather.scss';
+
+@use './components/search.scss';
+@use './components/city.scss';
+@use './components/searched-cities.scss';
