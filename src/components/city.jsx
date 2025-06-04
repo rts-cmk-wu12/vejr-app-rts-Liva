@@ -82,7 +82,7 @@ function City({ city }) {
                     <p className="city__text">today</p>
                     <p className="city__text">{`${currentDay}, ${months[currentMonth - 1]}`}</p>
                 </div>
-                <div className="city__range">
+                <div className="city__range city__range--hours">
                     {forecasts.map((forecast, index) => (
                         isRightDay(forecast.dt_txt.slice(0, 10)) && (
                             <div className="city__hour" key={index}>
