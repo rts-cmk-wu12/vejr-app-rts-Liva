@@ -23,12 +23,21 @@
 
     &__range, &__details {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: space-between;
         gap: 1rem;
+
+        &--heading {
+            margin-bottom: .8rem;
+            padding-bottom: .3rem;
+            border-bottom: 2px solid root.$transparent-white;
+        }
     }
 
     &__details {
         margin-top: 2rem;
+        justify-content: center;
 
         &-container {
             display: flex;
@@ -49,5 +58,19 @@
         &--lower {
             text-transform: none;
         }
+    }
+
+    &__forecast {
+        margin-top: 6rem;
+        text-align: center;
+
+        &-icon {
+            width: 3rem;
+        }
+    }
+
+    &__hour {
+        display: flex;
+        flex-direction: column;
     }
 }
