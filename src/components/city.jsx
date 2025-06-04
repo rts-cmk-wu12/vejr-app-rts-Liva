@@ -28,7 +28,7 @@ function City({ city }) {
 
     useEffect(() => {
         async function weatherForecasts() {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${city?.coord?.lat}&lon=${city?.coord?.lon}&appid=${API_KEY}&units=metric`);
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${city?.coord?.lat}&lon=${city?.coord?.lon}&cnt=8&appid=${API_KEY}&units=metric`);
 
             if (response.ok) {
                 const data = await response.json();
@@ -45,11 +45,12 @@ function City({ city }) {
         const foreCastMonth = Number(date.slice(5, 7));
         const foreCastDay = Number(date.slice(-2));
 
-        if (currentYear === foreCastYear && currentMonth === foreCastMonth && currentDay === foreCastDay) {
-            return true;
-        } else {
-            return false;
-        }
+        const verifyDate =
+            foreCastYear === currentYear &&
+            foreCastMonth === currentMonth &&
+            foreCastDay === currentDay;
+
+        return verifyDate;
     }
 
     return (
