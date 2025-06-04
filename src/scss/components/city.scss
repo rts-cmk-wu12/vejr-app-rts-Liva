@@ -34,6 +34,15 @@
             padding-bottom: .3rem;
             border-bottom: 2px solid root.$transparent-white;
         }
+
+        &--hours {
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: 1px;
+            scrollbar-color: root.$primary-dark;
+            padding-bottom: .8rem;
+        }
     }
 
     &__details {
@@ -62,7 +71,8 @@
     }
 
     &__forecast {
-        margin-top: 6rem;
+        max-width: 100%;
+        margin-block: 6rem 1rem;
         text-align: center;
 
         &-icon {
@@ -71,6 +81,7 @@
     }
 
     &__hour {
+        scroll-snap-align: center;
         display: flex;
         flex-direction: column;
     }
