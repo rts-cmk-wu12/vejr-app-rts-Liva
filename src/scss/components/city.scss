@@ -1,0 +1,88 @@
+@use '../placeholders/root.scss';
+
+.city {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__name {
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    &__icon {
+        width: 10rem;
+        height: auto;
+    }
+
+    &__temp {
+        font-size: 2.5em;
+        font-weight: 400;
+        margin-bottom: .5rem;
+    }
+
+    &__range,
+    &__details {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        &--heading {
+            margin-bottom: .8rem;
+            padding-bottom: .3rem;
+            border-bottom: 2px solid root.$transparent-white;
+        }
+
+        &--hours {
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: 1px;
+            scrollbar-color: root.$primary-dark;
+            padding-bottom: .8rem;
+        }
+    }
+
+    &__details {
+        margin-top: 2rem;
+        justify-content: center;
+
+        &-container {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        &-icon {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__text {
+        text-transform: capitalize;
+        font-weight: 300;
+        margin-bottom: .3rem;
+
+        &--lower {
+            text-transform: none;
+        }
+    }
+
+    &__forecast {
+        max-width: 100%;
+        margin-block: 6rem 1rem;
+        text-align: center;
+
+        &-icon {
+            width: 3rem;
+        }
+    }
+
+    &__hour {
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+}

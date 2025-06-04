@@ -1,0 +1,36 @@
+@use '../placeholders/root.scss';
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__logo {
+        width: 100vw;
+        max-width: 20rem;
+    }
+
+    &__title {
+        font-size: 3em;
+        font-weight: 600;
+        text-transform: capitalize;
+        text-align: center;
+
+        &--yellow {
+            text-transform: capitalize;
+            display: block;
+            color: root.$typeography-yellow;
+            font-weight: 500;
+        }
+    }
+
+    &__link {
+        margin-top: 2rem;
+        background-color: root.$accent-yellow;
+        color: root.$typeography-purple;
+        padding: .7rem 3rem;
+        text-transform: capitalize;
+        border-radius: 2rem;
+        font-weight: 600;
+    }
+}
