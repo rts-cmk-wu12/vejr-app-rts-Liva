@@ -1,0 +1,53 @@
+@use '../placeholders/root.scss';
+
+.city {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__name {
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    &__icon {
+        width: 10rem;
+        height: auto;
+    }
+
+    &__temp {
+        font-size: 2.5em;
+        font-weight: 400;
+        margin-bottom: .5rem;
+    }
+
+    &__range, &__details {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__details {
+        margin-top: 2rem;
+
+        &-container {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        &-icon {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__text {
+        text-transform: capitalize;
+        font-weight: 300;
+        margin-bottom: .3rem;
+
+        &--lower {
+            text-transform: none;
+        }
+    }
+}
