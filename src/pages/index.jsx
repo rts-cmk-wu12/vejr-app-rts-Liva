@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 
 function HomePage() {
-
     return (
         <main className="home">
             <img src="/logo.png" alt="logo" className="home__logo" />
